@@ -1,0 +1,96 @@
+{
+    "info": {
+        "_postman_id": "5a4b2d6a-862e-4b41-b089-7b287c47a0d7",
+        "name": "Tickets CRUD",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Tickets",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "{{base_url}}/tickets",
+                    "host": ["{{base_url}}"],
+                    "path": ["tickets"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Ticket",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"Ticket Title\",\n  \"description\": \"Ticket Description\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/tickets",
+                    "host": ["{{base_url}}"],
+                    "path": ["tickets"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Ticket",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "{{base_url}}/tickets/{{ticket_id}}",
+                    "host": ["{{base_url}}"],
+                    "path": ["tickets", "{{ticket_id}}"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Ticket",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"Updated Ticket Title\",\n  \"description\": \"Updated Ticket Description\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/tickets/{{ticket_id}}",
+                    "host": ["{{base_url}}"],
+                    "path": ["tickets", "{{ticket_id}}"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Ticket",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "{{base_url}}/tickets/{{ticket_id}}",
+                    "host": ["{{base_url}}"],
+                    "path": ["tickets", "{{ticket_id}}"]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
