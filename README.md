@@ -30,5 +30,6 @@ https://sebastian-trujillo.me/doublevpartners-backend
 ## Tecnologías utilizadas
 
 -   Laravel (PHP 8.0)
+-   Docker
 
 ## Estructura general del proyecto
