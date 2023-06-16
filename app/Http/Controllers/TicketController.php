@@ -32,6 +32,8 @@ class TicketController extends Controller
     $validator = Validator::make($request->all(), [
       'title' => 'required',
       'description' => 'required',
+      'status' => 'required|in:opened,closed',
+      'user_id' => 'required|exists:users,id',
     ]);
 
     // Check if validation fails
@@ -44,6 +46,8 @@ class TicketController extends Controller
     $ticket = Ticket::create([
       'title' => $request->input('title'),
       'description' => $request->input('description'),
+      'status' => $request->input('status'),
+      'user_id' => $request->input('user_id'),
     ]);
 
     return response()->json($ticket, 201);
